@@ -12,5 +12,6 @@ class Rice {
 
 
     static constraints = {
+      person(blank: false)
     }
 }

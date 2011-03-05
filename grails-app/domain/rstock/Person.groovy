@@ -8,5 +8,7 @@ class Person {
         return "$name - $surname"
     }
     static constraints = {
+      name(blank:false)
+      surname(blank:false)
     }
 }

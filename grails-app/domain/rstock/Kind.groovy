@@ -6,5 +6,6 @@ class Kind {
         return "$name"
     }
     static constraints = {
+      name(blank: false, unique: true)
     }
 }

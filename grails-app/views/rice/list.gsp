@@ -24,6 +24,8 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'rice.id.label', default: 'Id')}" />
                         
+                            <th><g:message code="rice.person.label" default="Person" /></th>
+                        
                             <g:sortableColumn property="amount" title="${message(code: 'rice.amount.label', default: 'Amount')}" />
                         
                             <g:sortableColumn property="gather" title="${message(code: 'rice.gather.label', default: 'Gather')}" />
@@ -31,8 +33,6 @@
                             <g:sortableColumn property="humidity" title="${message(code: 'rice.humidity.label', default: 'Humidity')}" />
                         
                             <th><g:message code="rice.kind.label" default="Kind" /></th>
-                        
-                            <th><g:message code="rice.person.label" default="Person" /></th>
                         
                         </tr>
                     </thead>
@@ -42,6 +42,8 @@
                         
                             <td><g:link action="show" id="${riceInstance.id}">${fieldValue(bean: riceInstance, field: "id")}</g:link></td>
                         
+                            <td>${fieldValue(bean: riceInstance, field: "person")}</td>
+                        
                             <td>${fieldValue(bean: riceInstance, field: "amount")}</td>
                         
                             <td><g:formatDate date="${riceInstance.gather}" /></td>
@@ -49,8 +51,6 @@
                             <td>${fieldValue(bean: riceInstance, field: "humidity")}</td>
                         
                             <td>${fieldValue(bean: riceInstance, field: "kind")}</td>
-                        
-                            <td>${fieldValue(bean: riceInstance, field: "person")}</td>
                         
                         </tr>
                     </g:each>

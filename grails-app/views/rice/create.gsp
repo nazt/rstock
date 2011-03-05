@@ -30,6 +30,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="person"><g:message code="rice.person.label" default="Person" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: riceInstance, field: 'person', 'errors')}">
+                                    <g:select name="person.id" from="${rstock.Person.list()}" optionKey="id" value="${riceInstance?.person?.id}"  />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="amount"><g:message code="rice.amount.label" default="Amount" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: riceInstance, field: 'amount', 'errors')}">
@@ -61,15 +70,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: riceInstance, field: 'kind', 'errors')}">
                                     <g:select name="kind.id" from="${rstock.Kind.list()}" optionKey="id" value="${riceInstance?.kind?.id}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="person"><g:message code="rice.person.label" default="Person" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: riceInstance, field: 'person', 'errors')}">
-                                    <g:select name="person.id" from="${rstock.Person.list()}" optionKey="id" value="${riceInstance?.person?.id}"  />
                                 </td>
                             </tr>
                         

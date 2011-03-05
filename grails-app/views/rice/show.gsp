@@ -30,6 +30,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="rice.person.label" default="Person" /></td>
+                            
+                            <td valign="top" class="value"><g:link controller="person" action="show" id="${riceInstance?.person?.id}">${riceInstance?.person?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="rice.amount.label" default="Amount" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: riceInstance, field: "amount")}</td>
@@ -54,13 +61,6 @@
                             <td valign="top" class="name"><g:message code="rice.kind.label" default="Kind" /></td>
                             
                             <td valign="top" class="value"><g:link controller="kind" action="show" id="${riceInstance?.kind?.id}">${riceInstance?.kind?.encodeAsHTML()}</g:link></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="rice.person.label" default="Person" /></td>
-                            
-                            <td valign="top" class="value"><g:link controller="person" action="show" id="${riceInstance?.person?.id}">${riceInstance?.person?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
